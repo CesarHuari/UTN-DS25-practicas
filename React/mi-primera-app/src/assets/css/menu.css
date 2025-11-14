@@ -1,0 +1,61 @@
+/* Estilos del Menú */
+.menu {
+  background-color: var(--primary-color);
+  padding: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu-list {
+  display: flex;
+  list-style: none;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.menu-item {
+  margin: 0;
+}
+
+.menu-link {
+  display: block;
+  color: var(--text-light);
+  text-decoration: none;
+  padding: 15px 20px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  border-bottom: 3px solid transparent;
+}
+
+.menu-link:hover {
+  background-color: var(--secondary-color);
+  border-bottom-color: var(--accent-color);
+  color: white;
+}
+
+.menu-link.active {
+  background-color: var(--secondary-color);
+  border-bottom-color: var(--accent-color);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .menu-list {
+    flex-direction: column;
+  }
+
+  .menu-link {
+    text-align: center;
+    border-bottom: none;
+    border-left: 3px solid transparent;
+    padding: 12px 15px;
+  }
+
+  .menu-link:hover,
+  .menu-link.active {
+    border-left-color: var(--accent-color);
+    border-bottom: none;
+  }
+}
