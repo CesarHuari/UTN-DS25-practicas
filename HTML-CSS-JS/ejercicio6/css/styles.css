@@ -1,0 +1,138 @@
+﻿body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  color: #333333;
+}
+
+header {
+  background-image: url('../images/header-bg.svg');
+  background-size: cover;
+  padding: 20px;
+  color: #0b2540;
+}
+
+header .top-area {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+}
+
+header img {
+  width: 140px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+header p {
+  margin: 5px 0 0;
+}
+
+nav {
+  background: #cce0ff;
+  padding: 10px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+nav a {
+  display: inline-block;
+  padding: 6px 12px;
+  background: #ffffff;
+  border: 1px solid #7f8c8d;
+  border-radius: 4px;
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+section {
+  background: #ffffff;
+  border: 1px solid #cccccc;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+section h2 {
+  margin-top: 0;
+}
+
+.featured-books {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.book-card {
+  border: 1px solid #cccccc;
+  padding: 10px;
+}
+
+.book-card img {
+  width: 100%;
+  height: auto;
+}
+
+.forms-grid {
+  display: grid;
+  gap: 15px;
+}
+
+.forms-grid label {
+  font-weight: bold;
+}
+
+.forms-grid input,
+.forms-grid select,
+.forms-grid textarea {
+  padding: 8px;
+  border: 1px solid #b5b5b5;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+.button-simple {
+  display: inline-block;
+  padding: 10px 18px;
+  border: 1px solid #0b2540;
+  background: #e8f0ff;
+  cursor: pointer;
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+footer {
+  background: #0b2540;
+  color: #ffffff;
+  padding: 20px;
+}
+
+footer .footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-content a {
+  color: #f7dc6f;
+}

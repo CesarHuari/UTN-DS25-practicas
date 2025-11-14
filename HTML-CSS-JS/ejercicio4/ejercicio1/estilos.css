@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 2rem;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background: #f7f7fb;
+  color: #222;
+}
+
+h1,
+h2,
+h3 {
+  color: #1f4b99;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+p {
+  color: #3d3d3d;
+  line-height: 1.6;
+  background: #ffffff;
+  padding: 0.75rem 1rem;
+  border-left: 4px solid #ff7b54;
+  border-radius: 4px;
+  max-width: 40rem;
+}
+
+a {
+  color: #ff7b54;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

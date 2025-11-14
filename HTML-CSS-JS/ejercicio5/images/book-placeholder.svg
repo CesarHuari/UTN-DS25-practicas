@@ -1,0 +1,15 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="240" height="360" viewBox="0 0 240 360">
+  <defs>
+    <linearGradient id="coverGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f5f1e3" />
+      <stop offset="100%" stop-color="#e1d7c6" />
+    </linearGradient>
+  </defs>
+  <rect x="20" y="20" width="160" height="320" rx="12" fill="url(#coverGradient)" stroke="#c6b28e" stroke-width="4" />
+  <path d="M60 60 H140" stroke="#b08f5c" stroke-width="6" />
+  <path d="M60 110 H140" stroke="#b08f5c" stroke-width="6" />
+  <path d="M60 160 H140" stroke="#b08f5c" stroke-width="6" />
+  <path d="M60 210 H140" stroke="#b08f5c" stroke-width="6" />
+  <path d="M60 260 H140" stroke="#b08f5c" stroke-width="6" />
+  <path d="M60 310 H140" stroke="#b08f5c" stroke-width="6" />
+</svg>

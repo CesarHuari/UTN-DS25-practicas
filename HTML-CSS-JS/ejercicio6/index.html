@@ -1,0 +1,206 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Librería cesar | Libros y humor simple</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header id="inicio">
+    <div class="top-area">
+      <img src="images/logo.svg" alt="Logo de Librería Faro" />
+      <div>
+        <h1>Librería cesar</h1>
+        <p>Un lugar chico con libros de humor y lectura diaria.</p>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#narrativa">Narrativa</a></li>
+      <li><a href="#humor">Humor</a></li>
+      <li><a href="#ciencia">Ciencia</a></li>
+      <li><a href="#infantil">Infantil</a></li>
+      <li><a href="#registro">Registración</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Página principal</h2>
+      <p>
+        leer, recomendar y compartir libros simples.
+      .
+      </p>
+      <div class="featured-books">
+        <article class="book-card">
+          <img src="images/book.svg" alt="Libro destacado" />
+          <h3>Lecturas del puerto</h3>
+          <p>Historias cortas para empezar a leer sin miedo.</p>
+        </article>
+        <article class="book-card">
+          <img src="images/book.svg" alt="Libro destacado" />
+          <h3>Guía del chiste</h3>
+          <p>Libro con chistes clásicos y espacio para anotaciones.</p>
+        </article>
+        <article class="book-card">
+          <img src="images/book.svg" alt="Libro destacado" />
+          <h3>Manual de curiosos</h3>
+          <p>Pequeños artículos de ciencia contados en lenguaje simple.</p>
+        </article>
+        <article class="book-card">
+          <img src="images/book.svg" alt="Libro destacado" />
+          <h3>Club de peques</h3>
+          <p>Cuentos con actividades para niñas y niños.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="narrativa">
+      <h2>Sección Narrativa</h2>
+      <p>Novelas cortas y cuentos sencillos que recomendamos a quienes recien arrancan.</p>
+      <div class="featured-books">
+        <article class="book-card">
+          <img src="images/book.svg" alt="Libro narrativa" />
+          <h3>Cartas del faro</h3>
+          <p class="book-description">Relatos sobre un pueblo costero con humor liviano.</p>
+        </article>
+        <article class="book-card">
+          <img src="images/book.svg" alt="Libro narrativa" />
+          <h3>Personas comunes</h3>
+          <p class="book-description">Historias cortas de familias y amigos.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="humor">
+      <h2>Sección Humor</h2>
+      <p>Libros de chistes, monólogos y crónicas divertidas.</p>
+      <div class="featured-books">
+        <article class="book-card">
+          <img src="images/book.svg" alt="Libro humor" />
+          <h3>Manual de risas</h3>
+          <p class="book-description">Selección de chistes cortos de autores locales.</p>
+        </article>
+        <article class="book-card">
+          <img src="images/book.svg" alt="Libro humor" />
+          <h3>Viajes con chiste</h3>
+          <p class="book-description">Crónicas de viaje contadas con humor simple.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="ciencia">
+      <h2>Sección Ciencia</h2>
+      <p>Divulgación básica, datos curiosos y experimentos caseros.</p>
+      <div class="featured-books">
+        <article class="book-card">
+          <img src="images/book.svg" alt="Libro ciencia" />
+          <h3>Planeta fácil</h3>
+          <p class="book-description">Todo sobre el clima explicado con dibujos.</p>
+        </article>
+        <article class="book-card">
+          <img src="images/book.svg" alt="Libro ciencia" />
+          <h3>Laboratorio bolsillo</h3>
+          <p class="book-description">Experimentos con materiales de casa.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="infantil">
+      <h2>Sección Infantil</h2>
+      <p>Lecturas ilustradas, juegos de palabras y canciones.</p>
+      <div class="featured-books">
+        <article class="book-card">
+          <img src="images/book.svg" alt="Libro infantil" />
+          <h3>Mariposa color</h3>
+          <p class="book-description">Libro interactivo con stickers.</p>
+        </article>
+        <article class="book-card">
+          <img src="images/book.svg" alt="Libro infantil" />
+          <h3>Risas en ronda</h3>
+          <p class="book-description">Canciones y adivinanzas para grupos.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="registro">
+      <h2>Registración</h2>
+      <p>Completá el formulario para sumarte a las novedades de Librería Faro.</p>
+      <form class="forms-grid" action="#" method="post">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+
+        <label for="apellido">Apellido</label>
+        <input type="text" id="apellido" name="apellido" placeholder="Tu apellido" required />
+
+        <label for="fecha">Fecha de nacimiento</label>
+        <input type="date" id="fecha" name="fecha" required />
+
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email" placeholder="nombre@correo.com" required />
+
+        <label for="telefono">Teléfono</label>
+        <input type="tel" id="telefono" name="telefono" placeholder="Código de área + número" />
+
+        <label for="favorito">Sección favorita</label>
+        <select id="favorito" name="favorito">
+          <option value="">Elegí una opción</option>
+          <option value="narrativa">Narrativa</option>
+          <option value="humor">Humor</option>
+          <option value="ciencia">Ciencia</option>
+          <option value="infantil">Infantil</option>
+        </select>
+
+        <label for="pass">Contraseña</label>
+        <input type="password" id="pass" name="pass" required />
+
+        <button class="button-simple" type="submit">Enviar datos</button>
+      </form>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <div class="contact-layout">
+        <div>
+          <p><strong>Dirección:</strong> Calle d123, Bahía </p>
+          <p><strong>Teléfonos:</strong> (011) 4555-2200 / (011) 4555-2300</p>
+          <p><strong>Email:</strong> hola@libreria.com</p>
+          <p><strong>Horario:</strong> Lunes a sábado de 9 a 20 h.</p>
+        </div>
+        <form class="forms-grid" action="#" method="post">
+          <label for="nombre-contacto">Nombre y apellido</label>
+          <input type="text" id="nombre-contacto" name="nombre_contacto" required />
+
+          <label for="email-contacto">Correo electrónico</label>
+          <input type="email" id="email-contacto" name="email_contacto" required />
+
+          <label for="tema">Tema del mensaje</label>
+          <input type="text" id="tema" name="tema" />
+
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+
+          <button class="button-simple" type="submit">Enviar consulta</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 Librería Faro</p>
+      <div>
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">YouTube</a>
+      </div>
+      <a href="#">Términos y condiciones</a>
+    </div>
+  </footer>
+</body>
+</html>
