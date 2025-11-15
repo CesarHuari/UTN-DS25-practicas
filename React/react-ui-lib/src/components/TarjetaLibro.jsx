@@ -1,7 +1,7 @@
 import { Card, CardMedia, CardContent, CardActions, Typography, Button, Box } from '@mui/material';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
-const BookCard = ({ title, author, description, image, price = '$19.99' }) => {
+const TarjetaLibro = ({ titulo, autor, descripcion, imagen, precio = '0' }) => {
   return (
     <Card
       sx={{
@@ -18,8 +18,8 @@ const BookCard = ({ title, author, description, image, price = '$19.99' }) => {
       <CardMedia
         component="img"
         height="300"
-        image={image}
-        alt={title}
+        image={imagen}
+        alt={titulo}
         sx={{ objectFit: 'cover' }}
       />
       <CardContent sx={{ flexGrow: 1 }}>
@@ -38,10 +38,10 @@ const BookCard = ({ title, author, description, image, price = '$19.99' }) => {
             WebkitBoxOrient: 'vertical',
           }}
         >
-          {title}
+          {titulo}
         </Typography>
         <Typography variant="body2" sx={{ color: '#d2691e', fontStyle: 'italic', mb: 1 }}>
-          por {author}
+          por {autor}
         </Typography>
         <Typography
           variant="body2"
@@ -56,7 +56,7 @@ const BookCard = ({ title, author, description, image, price = '$19.99' }) => {
             WebkitBoxOrient: 'vertical',
           }}
         >
-          {description}
+          {descripcion}
         </Typography>
       </CardContent>
       <CardActions
@@ -75,7 +75,7 @@ const BookCard = ({ title, author, description, image, price = '$19.99' }) => {
             color: '#8b4513',
           }}
         >
-          {price}
+          {precio}
         </Typography>
         <Button
           size="small"
@@ -95,4 +95,4 @@ const BookCard = ({ title, author, description, image, price = '$19.99' }) => {
   );
 };
 
-export default BookCard;
+export default TarjetaLibro;

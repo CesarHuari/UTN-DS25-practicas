@@ -9,16 +9,17 @@ import PersonAddIcon from '@mui/icons-material/PersonAdd';
 import CallIcon from '@mui/icons-material/Call';
 
 const Menu = () => {
-  const location = useLocation();
+  const ubicacion = useLocation();
 
-  const menuItems = [
-    { label: 'Inicio', path: '/', icon: HomeIcon },
-    { label: 'Ficción', path: '/ficcion', icon: MenuBookIcon },
-    { label: 'No Ficción', path: '/no-ficcion', icon: AutoStoriesIcon },
-    { label: 'Infantil', path: '/infantil', icon: ChildCareIcon },
-    { label: 'Técnico', path: '/tecnico', icon: CodeIcon },
-    { label: 'Registración', path: '/registro', icon: PersonAddIcon },
-    { label: 'Contacto', path: '/contacto', icon: CallIcon },
+  const elementosMenu = [
+    { etiqueta: 'Inicio', path: '/', icono: HomeIcon },
+    { etiqueta: 'Ficción', path: '/ficcion', icono: MenuBookIcon },
+    { etiqueta: 'No Ficción', path: '/no-ficcion', icono: AutoStoriesIcon },
+    { etiqueta: 'Infantil', path: '/infantil', icono: ChildCareIcon },
+    { etiqueta: 'Técnico', path: '/tecnico', icono: CodeIcon },
+    { etiqueta: 'Catálogo', path: '/catalogo', icono: MenuBookIcon },
+    { etiqueta: 'Registración', path: '/registro', icono: PersonAddIcon },
+    { etiqueta: 'Contacto', path: '/contacto', icono: CallIcon },
   ];
 
   return (
@@ -26,20 +27,20 @@ const Menu = () => {
       <Container maxWidth="lg">
         <Toolbar disableGutters sx={{ justifyContent: 'center', flexWrap: 'wrap', gap: 1 }}>
           <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap', justifyContent: 'center' }}>
-            {menuItems.map((item) => {
-              const Icon = item.icon;
-              const isActive = location.pathname === item.path;
+            {elementosMenu.map((elemento) => {
+              const Icono = elemento.icono;
+              const esActivo = ubicacion.pathname === elemento.path;
               return (
                 <Button
-                  key={item.path}
+                  key={elemento.path}
                   component={RouterLink}
-                  to={item.path}
-                  startIcon={<Icon />}
+                  to={elemento.path}
+                  startIcon={<Icono />}
                   sx={{
                     color: '#ecf0f1',
                     fontSize: '0.95rem',
                     fontWeight: 500,
-                    borderBottom: isActive ? '3px solid #f4a460' : 'none',
+                    borderBottom: esActivo ? '3px solid #f4a460' : 'none',
                     borderRadius: '0px',
                     '&:hover': {
                       backgroundColor: '#d2691e',
@@ -48,7 +49,7 @@ const Menu = () => {
                     transition: 'all 0.3s ease',
                   }}
                 >
-                  {item.label}
+                  {elemento.etiqueta}
                 </Button>
               );
             })}

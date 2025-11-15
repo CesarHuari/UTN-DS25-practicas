@@ -1,9 +1,11 @@
 import { Link as RouterLink } from 'react-router-dom';
 import { Grid, Card, CardContent, CardMedia, Typography, Button, Box, Container } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import { booksData, sections } from '../data/booksData';
+import { secciones } from '../data/booksData';
+import { useCatalogo } from '../context/ContextoCatálogo';
 
 const HomePage = () => {
+  const { libros } = useCatalogo();
   return (
     <Box sx={{ width: '100%' }}>
       <Typography
@@ -19,16 +21,15 @@ const HomePage = () => {
       </Typography>
 
       <Grid container spacing={3}>
-        {sections.map((section) => {
-          const sectionKey = section.id === 'no-ficcion' ? 'noFiccion'
-            : section.id === 'infantil' ? 'infantil'
-              : section.id === 'tecnico' ? 'tecnico'
+        {secciones.map((seccion) => {
+          const claveSeccion = seccion.id === 'no-ficcion' ? 'noFiccion'
+            : seccion.id === 'infantil' ? 'infantil'
+              : seccion.id === 'tecnico' ? 'tecnico'
                 : 'ficcion';
-
-          const featuredBook = booksData[sectionKey].find(book => book.featured);
+          const libroDestacado = (libros[claveSeccion] || []).find((libro) => libro.destacado) || (libros[claveSeccion] && libros[claveSeccion][0]) || { titulo: '', autor: '', imagen: '' };
 
           return (
-            <Grid item xs={12} sm={6} md={6} lg={3} key={section.id}>
+            <Grid item xs={12} sm={6} md={6} lg={3} key={seccion.id}>
               <Card
                 sx={{
                   height: '100%',
@@ -50,14 +51,14 @@ const HomePage = () => {
                   }}
                 >
                   <Typography variant="h5" sx={{ fontWeight: 'bold', mb: 1 }}>
-                    {section.name}
+                    {seccion.nombre}
                   </Typography>
                   <Typography variant="body2" sx={{ mb: 2, opacity: 0.9 }}>
-                    {section.description}
+                    {seccion.descripcion}
                   </Typography>
                   <Button
                     component={RouterLink}
-                    to={section.path}
+                    to={seccion.path}
                     variant="contained"
                     endIcon={<ArrowForwardIcon />}
                     sx={{
@@ -77,8 +78,8 @@ const HomePage = () => {
                 <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                   <CardMedia
                     component="img"
-                    image={featuredBook.image}
-                    alt={featuredBook.title}
+                    image={libroDestacado.imagen}
+                    alt={libroDestacado.titulo}
                     sx={{
                       height: 250,
                       objectFit: 'cover',
@@ -95,7 +96,7 @@ const HomePage = () => {
                       mb: 0.5,
                     }}
                   >
-                    {featuredBook.title}
+                    {libroDestacado.titulo}
                   </Typography>
                   <Typography
                     variant="body2"
@@ -104,7 +105,7 @@ const HomePage = () => {
                       fontStyle: 'italic',
                     }}
                   >
-                    {featuredBook.author}
+                    {libroDestacado.autor}
                   </Typography>
                 </CardContent>
               </Card>
